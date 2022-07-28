@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_03_Page_Object {
 	WebDriver driver;
@@ -19,8 +19,8 @@ public class Level_03_Page_Object {
 	BasePage basePage;
 	String projectPath= System.getProperty("user.dir");
 	
-	HomePageObject homePage;
-	RegisterPageObject registerPage;
+	UserHomePageObject homePage;
+	UserRegisterPageObject registerPage;
 	
 	String firstName,lastName,password,emailAddress;
 	
@@ -37,8 +37,8 @@ public class Level_03_Page_Object {
 		emailAddress="nhuttest"+generateNumber()+"@yopmail.com";
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/");
-		homePage=new HomePageObject(driver);
-		registerPage=new RegisterPageObject(driver);
+		homePage=new UserHomePageObject(driver);
+		registerPage=new UserRegisterPageObject(driver);
 		firstName ="nhut";
 		lastName="minh";
 		password="123456";
