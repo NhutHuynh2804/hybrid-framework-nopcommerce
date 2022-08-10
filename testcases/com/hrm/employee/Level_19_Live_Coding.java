@@ -233,6 +233,9 @@ public class Level_19_Live_Coding extends BaseTest {
 		log.info("Personal Details_03 - Step 20: Verify 'Nationality' dropdown is update success ");
 		verifyEquals(myInfoPage.getItemDropdownByID(driver, "personal_cmbNation"),editEmpNationality);
 
+		log.info("Personal Details_03 - Step 21: Verify 'Employee ID' textbox value is correct ");
+		verifyEquals(myInfoPage.getItemDropdownByID(driver, "personal_txtEmployeeId"),employeeID);
+
 		
 		
 
