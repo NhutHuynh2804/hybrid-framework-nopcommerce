@@ -195,10 +195,10 @@ public class Level_19_Live_Coding extends BaseTest {
 
 		
 		log.info("Personal Details_03 - Step 09: Enter new value to 'First Name' textbox");
-		myInfoPage.enterToTextboxByID(driver, "txtEmpFirstName", editEmpFirstName);
+		myInfoPage.enterToTextboxByID(driver, "personal_txtEmpFirstName", editEmpFirstName);
 		
 		log.info("Personal Details_03 - Step 10: Enter new value to 'Last Name' textbox");
-		myInfoPage.enterToTextboxByID(driver, "txtEmpLastName", editEmpLasttName);
+		myInfoPage.enterToTextboxByID(driver, "personal_txtEmpLastName", editEmpLasttName);
 
 		log.info("Personal Details_03 - Step 11: Select new value to 'Gender' radio button");
 		myInfoPage.clickToRadioByLabelHRM(driver, editEmpGender);
@@ -207,7 +207,7 @@ public class Level_19_Live_Coding extends BaseTest {
 		myInfoPage.selectItemDropdownByID(driver, "personal_cmbMarital", editEmpMaritalStatus);
 
 		log.info("Personal Details_03 - Step 13: Select new value to 'Nationality' dropdown");
-		myInfoPage.enterToTextboxByID(driver, "personal_cmbNation", editEmpNationality);
+		myInfoPage.selectItemDropdownByID(driver, "personal_cmbNation", editEmpNationality);
 
 		
 		
