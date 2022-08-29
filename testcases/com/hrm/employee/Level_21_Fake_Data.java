@@ -15,14 +15,16 @@ import pageObject.hrm.EmployeeListPO;
 import pageObject.hrm.LoginPO;
 import pageObject.hrm.MyInfoPO;
 import pageObject.hrm.PageGenerator;
+import utilities.DataUtil;
 
-public class Level_19_Live_Coding extends BaseTest {
+public class Level_21_Fake_Data extends BaseTest {
 	WebDriver driver;
 	LoginPO loginPage;
 	AddEmployeePO addEmployeePage;
 	DashboardPO dashboardPage;
 	EmployeeListPO employeeListPage;
 	MyInfoPO myInfoPage;
+	DataUtil fakeData;
 	
 	String employeeID, statusValue;
 	String adminUserName, adminPassword, empFirstName, empLastName, empPassword, empUsername, empFullName;
@@ -38,17 +40,18 @@ public class Level_19_Live_Coding extends BaseTest {
 	public void beforeClass(String browserName, String appUrl) {
 		log.info("Pre-Condition:Open browser"+browserName+ "'and navigate to'"+appUrl+"'");
 		driver= getBrowserDriver(browserName,appUrl);
+		fakeData=DataUtil.getData();
 		
 		statusValue="Enabled";
 		adminUserName="Admin";
 		adminPassword="admin123";
-		empFirstName="Automation";
-		empLastName="FX";
-		empPassword="automationfx";
-		empUsername="automationfx";
+		empFirstName=fakeData.getFirstName();
+		empLastName=fakeData.getLastName();
+		empPassword=fakeData.getPassword();
+		empUsername=fakeData.getUserName();
 		empFullName=empFirstName+" "+empLastName;
-		editEmpFirstName ="John"; 
-		editEmpLasttName ="Cenna";  
+		editEmpFirstName =fakeData.getEditFirstName(); 
+		editEmpLasttName =fakeData.getEditLastName();  
 		editEmpGender="Male" ;
 		editEmpMaritalStatus ="Single";
 		editEmpNationality = "Vietnamese";

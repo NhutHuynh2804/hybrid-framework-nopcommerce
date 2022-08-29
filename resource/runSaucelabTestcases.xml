@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SauceLab">
+
+    <parameter name="url" value="https://www.saucedemo.com/inventory.html"/>
+ 
+ <listeners>
+	<listener class-name="commons.MethodListener"></listener>
+	<!--  <listener class-name="reportConfig.ReportNGListener"/>-->
+	<!-- <listener class-name="reportConfig.ExtentTestListener"/>>-->
+	<!-- <listener class-name="org.uncommons.reportng.HTMLReporter"/>>-->
+	<!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>>-->
+	</listeners>
+ 
+   <test name="Run on Chrome">
+     <parameter name="browser" value="chrome"/>
+     <classes>
+     <class name ="com.saucelab.sort.Level_20_Sort" />
+     </classes>
+   </test>
+   
+    
+
+</suite>
